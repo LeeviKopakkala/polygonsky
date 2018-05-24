@@ -1,0 +1,443 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100');
+
+body {
+	 font-family: 'Lato', sans-serif;
+
+	 background:#182733;
+}
+
+h3 {
+	color:#FFF;
+}
+
+#background-wallpaper {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#background-wallpaper img {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: 0 auto; 
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  filter: blur(10px);
+  filter:hue-rotate(0deg);	
+  z-index:999;
+
+}
+
+.clocksettings input {
+  position:absolute;
+  left:47%;
+  top:200%;
+  width:140px;
+  z-index:1001;
+
+}
+
+
+.clock {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+ font-family: 'Lato', sans-serif;
+  font-size:1500%;
+   margin-top: -7%;
+  margin-left: -25%;
+  color:#FFF;
+  opacity: 1.0;
+  display:none;
+}
+
+.clock:hover {
+	cursor:pointer;
+}
+
+.clock:active {
+
+	cursor:grab; 
+}
+
+.clock-background img {
+
+
+ position: fixed; 
+ height:50px;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 20%;
+  min-height: 20%;	 	
+  filter: blur(0px);
+  opacity:0.0;
+
+
+}
+
+div { width:100%; height:70%; } 
+.layer-1 { width:100%; height:50px; }
+.layer-1{ 
+background: -moz-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(173,76,253,1) 26%, rgba(228,48,178,1) 58%, rgba(255,35,144,1) 73%, rgba(255,162,67,1) 100%); 
+background: -webkit-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(173,76,253,1) 26%, rgba(228,48,178,1) 58%, rgba(255,35,144,1) 73%, rgba(255,162,67,1) 100%); 
+background: -o-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(173,76,253,1) 26%, rgba(228,48,178,1) 58%, rgba(255,35,144,1) 73%, rgba(255,162,67,1) 100%); 
+background: -ms-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(173,76,253,1) 26%, rgba(228,48,178,1) 58%, rgba(255,35,144,1) 73%, rgba(255,162,67,1) 100%); 
+background: linear-gradient(90deg, rgba(78,162,255,1) 0%, rgba(173,76,253,1) 26%, rgba(228,48,178,1) 58%, rgba(255,35,144,1) 73%, rgba(255,162,67,1) 100%); 
+} 
+
+.controlicon img {
+	position:fixed;
+	right:50px;
+	top:30px;
+	height:70px;
+	filter:brightness(1);
+	z-index:100;
+	opacity:0.2;
+	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+}
+
+.controlicon img:hover {
+	opacity:0.7;
+	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+	cursor:pointer;
+}
+
+.controls {
+	display:none;
+		 font-family: 'Lato', sans-serif;
+		 font-size:90% !important;
+		 font-style: normal !important;
+	position:absolute;
+	top:0px;
+	width:100%;
+	right:0%;
+	height:50px;
+	z-index:99;
+	opacity:0.7;
+
+
+}
+
+.controls p {
+	bottom:-100%;
+	left:47%;
+	display:block;
+	position:absolute;
+	z-index:100;
+
+	color:#FFF;
+	padding:20px;
+	border-radius:50px;
+background: -moz-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(78,162,255,1) 13%, rgba(35,181,255,1) 45%, rgba(41,160,255,1) 58%, rgba(63,93,255,1) 100%); 
+background: -webkit-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(78,162,255,1) 13%, rgba(35,181,255,1) 45%, rgba(41,160,255,1) 58%, rgba(63,93,255,1) 100%); 
+background: -o-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(78,162,255,1) 13%, rgba(35,181,255,1) 45%, rgba(41,160,255,1) 58%, rgba(63,93,255,1) 100%); 
+background: -ms-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(78,162,255,1) 13%, rgba(35,181,255,1) 45%, rgba(41,160,255,1) 58%, rgba(63,93,255,1) 100%); 
+background: linear-gradient(90deg, rgba(78,162,255,1) 0%, rgba(78,162,255,1) 13%, rgba(35,181,255,1) 45%, rgba(41,160,255,1) 58%, rgba(63,93,255,1) 100%); 
+
+}
+
+.controls input {
+
+	background: -moz-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(173,76,253,1) 26%, rgba(228,48,178,1) 58%, rgba(255,35,144,1) 73%, rgba(255,162,67,1) 100%); 
+background: -webkit-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(173,76,253,1) 26%, rgba(228,48,178,1) 58%, rgba(255,35,144,1) 73%, rgba(255,162,67,1) 100%); 
+background: -o-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(173,76,253,1) 26%, rgba(228,48,178,1) 58%, rgba(255,35,144,1) 73%, rgba(255,162,67,1) 100%); 
+background: -ms-linear-gradient(0deg, rgba(78,162,255,1) 0%, rgba(173,76,253,1) 26%, rgba(228,48,178,1) 58%, rgba(255,35,144,1) 73%, rgba(255,162,67,1) 100%); 
+background: linear-gradient(90deg, rgba(78,162,255,1) 0%, rgba(173,76,253,1) 26%, rgba(228,48,178,1) 58%, rgba(255,35,144,1) 73%, rgba(255,162,67,1) 100%); 
+
+border-radius:20px;
+} 
+
+.controls p:hover {
+	cursor:pointer;
+}
+
+.showclock:hover {
+	cursor:pointer;
+	opacity:1.0;
+	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+
+}
+
+.wallpapercontrol form {
+
+	padding:10px;
+	background:#1B2838;
+max-width:300px;
+border-radius:0px 100px 0px 0px;
+}
+
+#wallpaper {
+   
+    z-index:1000;
+}
+
+.welcome {
+  display:block;
+     font-family: 'Lato', sans-serif;
+     font-size:100% !important;
+     font-style: normal !important;
+  position:absolute;
+  top:-7px;
+  width:50%;
+  padding-left:10px;
+  z-index:10002;
+  opacity:1;
+  color:#FFF;
+}
+
+.welcome small {
+  font-size: 70%;
+  padding-left:10px;
+}
+
+
+.colorsettings input[type='range'] {
+  width: 210px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  background:url(IMG/pattern2.png);
+  object-fit:cover;
+}
+.colorsettings input[type='range'],
+.colorsettings input[type='range']::-webkit-slider-runnable-track,
+.colorsettings input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.colorsettings input[type='range']::-webkit-slider-runnable-track {
+  width: 200px;
+  height: 10px;
+  background: #AAA;
+}
+.colorsettings input[type='range']::-webkit-slider-thumb {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-top: -10px;
+ background: url(IMG/patternsmall.png);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.colorsettings input[type='range']::-webkit-slider-thumb::before {
+  position: absolute;
+  content: '';
+  height: 10px; /* equal to height of runnable track */
+  width: 500px; /* make this bigger than the widest range input element */
+  left: -502px; /* this should be -2px - width */
+  top: 8px; /* don't change this */
+  background: #777;
+}
+
+/* Grayscale */
+
+.grayscalesettings input[type='range'] {
+  width: 210px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  background:url(IMG/pattern3.png);
+  object-fit:cover;
+}
+.grayscalesettings input[type='range'],
+.grayscalesettings input[type='range']::-webkit-slider-runnable-track,
+.grayscalesettings input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.grayscalesettings input[type='range']::-webkit-slider-runnable-track {
+  width: 200px;
+  height: 10px;
+  background: #AAA;
+}
+.grayscalesettings input[type='range']::-webkit-slider-thumb {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-top: -10px;
+  background: url(IMG/patternsmall.png);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.grayscalesettings input[type='range']::-webkit-slider-thumb::before {
+  position: absolute;
+  content: '';
+  height: 10px; /* equal to height of runnable track */
+  width: 500px; /* make this bigger than the widest range input element */
+  left: -502px; /* this should be -2px - width */
+  top: 8px; /* don't change this */
+  background: #777;
+}
+
+/* Blur */
+
+.blursettings input[type='range'] {
+  width: 210px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  background:url(IMG/pattern.png);
+  object-fit:cover;
+}
+.blursettings input[type='range'],
+.blursettings input[type='range']::-webkit-slider-runnable-track,
+.blursettings input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.blursettings input[type='range']::-webkit-slider-runnable-track {
+  width: 200px;
+  height: 10px;
+  background: #AAA;
+}
+.blursettings input[type='range']::-webkit-slider-thumb {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-top: -10px;
+  background: url(IMG/patternsmall.png);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.blursettings input[type='range']::-webkit-slider-thumb::before {
+  position: absolute;
+  content: '';
+  height: 10px; /* equal to height of runnable track */
+  width: 500px; /* make this bigger than the widest range input element */
+  left: -502px; /* this should be -2px - width */
+  top: 8px; /* don't change this */
+  background: #777;
+}
+
+/** Invert **/
+
+.invertsettings input[type='range'] {
+  width: 100px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  background:url(IMG/gradient2.png);
+  object-fit:cover;
+}
+.invertsettings input[type='range'],
+.invertsettings input[type='range']::-webkit-slider-runnable-track,
+.invertsettings input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.invertsettings input[type='range']::-webkit-slider-runnable-track {
+  width: 200px;
+  height: 10px;
+  background: #AAA;
+}
+.invertsettings input[type='range']::-webkit-slider-thumb {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-top: -10px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.invertsettings input[type='range']::-webkit-slider-thumb::before {
+  position: absolute;
+  content: '';
+  height: 10px; /* equal to height of runnable track */
+  width: 500px; /* make this bigger than the widest range input element */
+  left: -502px; /* this should be -2px - width */
+  top: 8px; /* don't change this */
+  background: #777;
+}
+
+/* Saturate */
+
+.saturatesettings input[type='range'] {
+  width: 210px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  background:url(IMG/patternsmall.png);
+  object-fit:cover;
+}
+.saturatesettings input[type='range'],
+.saturatesettings input[type='range']::-webkit-slider-runnable-track,
+.saturatesettings input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.saturatesettings input[type='range']::-webkit-slider-runnable-track {
+  width: 200px;
+  height: 10px;
+  background: #AAA;
+}
+.saturatesettings input[type='range']::-webkit-slider-thumb {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-top: -10px;
+  background: url(IMG/patternsmall.png);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.saturatesettings input[type='range']::-webkit-slider-thumb::before {
+  position: absolute;
+  content: '';
+  height: 10px; /* equal to height of runnable track */
+  width: 500px; /* make this bigger than the widest range input element */
+  left: -502px; /* this should be -2px - width */
+  top: 8px; /* don't change this */
+  background: #777;
+}
+
+/* Clock */
+
+.clocksettings input[type='range'] {
+  width: 150px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  background:url(IMG/pattern.png);
+  object-fit:cover;
+}
+.clocksettings input[type='range'],
+.clocksettings input[type='range']::-webkit-slider-runnable-track,
+.clocksettings input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.clocksettings input[type='range']::-webkit-slider-runnable-track {
+  width: 200px;
+  height: 10px;
+  background: #AAA;
+}
+.clocksettings input[type='range']::-webkit-slider-thumb {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-top: -10px;
+  background: url(IMG/patternsmall.png);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.clocksettings input[type='range']::-webkit-slider-thumb::before {
+  position: absolute;
+  content: '';
+  height: 10px; /* equal to height of runnable track */
+  width: 500px; /* make this bigger than the widest range input element */
+  left: -502px; /* this should be -2px - width */
+  top: 8px; /* don't change this */
+  background: #777;
+}
+
+
+
+
+
+
+

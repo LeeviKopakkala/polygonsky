@@ -1,0 +1,173 @@
+
+<!-- IMPORTANT NOTE
+
+
+I HOPE YOU ENJOY THIS WALLPAPER! 
+BUT HERE ARE SOME QUICK NOTES THAT I HOPE YOU READ:
+YOU MAY NOT USE ANY PARTS OF THIS CODE/ARTWORK WITHOUT PERMISSION
+IF YOU WANT TO DISCUSS ABOUT USING ELEMENTS
+OR WANT HELP WITH YOUR OWN PROJECT 
+PLEASE CONTACT /id/thedouglasadams ON STEAM!
+THANK YOU!
+
+- DOUGLASADAMS
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Polygon Sky</title>
+        <link rel="stylesheet" href="Assets/CSS/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+    </head>
+    <!-- UI -->
+	<body onload="startTime(); addzero();"><div id="controlicon" class="controlicon"> <img src="Assets/CSS/IMG/polygonskylogonewestwithoutb.png" alt="controlicon" onClick="showcontrols()"> </div><div id="controls" class="controls"><div class='layer-1' > </div><p class="showclock" onClick ="showclock()"> Show/Hide Clock </p> <div class="clocksettings">  <input id="clockvalue" type="range" min="0" max="3000" value="1500" step=""></div><div class="wallpapercontrol">
+    <!-- Controls -->
+	<form>
+    <h3> Color: </h3>
+    <div class="colorsettings">  <input id="colorvalue" type="range" min="5" max="360" value="360"> </div>
+    <h3> Grayscale (0-100): </h3>
+    <div class="grayscalesettings"> <input id="grayscalevalue" type="range" min="0" max="110" value="0"></div>
+    <h3> Blur (0-100): </h3>
+    <div class="blursettings"> <input id="blurvalue" type="range" min="0" max="80" value="0"></div>
+    <h3> Saturation: </h3>
+    <div class="saturatesettings"> <input id="saturatevalue" type="range" min="0" max="200" value="100"></div>
+    <h3> Invert (Off/On): </h3>
+    <div class="invertsettings"> <input id="invertvalue" type="range" min="0" max="100" value="0" step="100"></div>
+    </form>
+    </div>
+    <div class="welcome"> 
+    <h2> Edit mode <small> Version: 1.5 </small> </h2>
+    </div>
+    </div>
+    <div id="background-wallpaper">
+    <img id="wallpaper" src="Assets/CSS/IMG/polygonsky.png" alt="" id="wallpaper">
+    </div>
+    <div class="clock-background">  <img src="Assets/CSS/IMG/polygonsky.png" alt="clock-background"> </div>
+	<div class="clock" id="clock">    
+	</div>
+ <script> 
+
+var img = document.getElementById("wallpaper");
+var clock = document.getElementById("clock");
+var slider1 = document.getElementById("colorvalue");
+var slider2 = document.getElementById("grayscalevalue");
+var slider3 = document.getElementById("blurvalue");
+var slider4 = document.getElementById("invertvalue");
+var slider5 = document.getElementById("saturatevalue");
+var sliderclock = document.getElementById("clockvalue");
+
+var color = slider1.value;
+var grayscale = slider2.value;
+var blur = slider3.value;
+var invert = slider4.value;
+var clocksize = sliderclock.value;
+var saturate = slider5.value;
+
+slider1.addEventListener("input", function(){
+    color = this.value;
+    img.style["-webkit-filter"] = "grayscale("+grayscale+"%) invert(" +invert+ "%) blur("+blur+"px) hue-rotate(" + this.value + "deg) saturate("+saturate+"%)";
+});
+slider2.addEventListener("input", function(){
+    grayscale = this.value;
+    img.style["-webkit-filter"] = "grayscale(" + this.value + "%) invert(" +invert+ "%) blur("+blur+"px) hue-rotate("+color+"deg) saturate("+saturate+"%)";
+});
+
+slider3.addEventListener("input", function(){
+    blur = this.value;
+    img.style["-webkit-filter"] = "grayscale(" + grayscale + "%) invert(" +invert+ "%) blur("+this.value+"px) hue-rotate("+color+"deg) saturate("+saturate+"%)";
+});
+
+slider4.addEventListener("input", function(){
+    invert = this.value;
+    img.style["-webkit-filter"] = "grayscale(" + grayscale + "%) invert(" +this.value+ "%) blur("+blur+"px) hue-rotate("+color+"deg) saturate("+saturate+"%)";
+});
+
+slider5.addEventListener("input", function(){
+    saturate = this.value;
+    img.style["-webkit-filter"] = "grayscale(" + grayscale + "%) invert(" +invert+ "%) blur("+blur+"px) hue-rotate("+color+"deg) saturate("+this.value+"%)";
+});
+
+$(sliderclock).on('input', function () {
+    var v = $(this).val();
+    $(clock).css('font-size', v + '%')
+});
+
+</script>
+<script>
+function showcontrols() {
+
+     var x = document.getElementById('controls');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+        x.style.opacity = '0.8'
+    } else {
+        x.style.display = 'none';
+        x.style.opacity = '0'
+    }
+}
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    if (h < 2) {
+     h = "0" + today.getHours();
+}
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+function showclock() {
+
+     var u = document.getElementById('clock');
+    if (u.style.display === 'none') {
+        u.style.display = 'block';
+
+    } else {
+        u.style.display = 'none';
+    }
+
+}
+</script>
+
+<script>
+document.getElementById("colorvalue").addEventListener("change", function() {
+    document.getElementById("img").setAttribute("style", "-webkit-filter:grayscale(" + this.value + "%)");
+}, false);​
+
+</script>
+
+<script>
+var m = document.getElementById('clock');
+m.addEventListener('mousedown', mouseDown, false);
+window.addEventListener('mouseup', mouseUp, false);
+
+function mouseUp() {
+    window.removeEventListener('mousemove', move, true);
+}
+
+function mouseDown(e) {
+    window.addEventListener('mousemove', move, true);
+}
+
+function move(e) {
+    m.style.top = e.clientY + 'px';
+    m.style.left = e.clientX + 'px';
+};
+
+
+</script>
+</body>
+</html>

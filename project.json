@@ -1,0 +1,25 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "[quote][i][h1]Polygon - Ready-to-use Edition BETA [/h1][/i]  [i]Moderne, à jour, séduisant...[/i]  [b]|[/b]  It's finally here! [/quote]\r\n\r\nReal-time editing.\r\n\r\n\r\n\r\n[i]\"Customizable with many effects.\"[/i]\r\nThe ultimate wallpaper - It doesn't get better t",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0.24313725490196078 0.5137254901960784"
+			}
+		}
+	},
+	"monetization" : false,
+	"preview" : "preview.png",
+	"tags" : [ "Abstract" ],
+	"title" : "Polygon - Ready-to-use Edition BETA 1.6",
+	"type" : "web",
+	"visibility" : "public",
+	"workshopid" : 1118171053
+}
